@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-section {
+            background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%),
+                              url('https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+        .movie-card:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header Section -->
+    <header class="fixed w-full z-50 bg-gradient-to-b from-black to-transparent">
+        <div class="flex justify-between items-center px-12 py-4">
+            <div class="flex items-center">
+                <svg class="h-8 w-32 text-red-600" viewBox="0 0 111 30" fill="currentColor">
+                    <path d="M105.06233,15.2806261 L110.999156,30 C109.249227,29.7497422 107.500234,29.4366857 105.718437,29.1554972 L105.06233,15.2806261 Z M100.438629,0 L94.5930733,15.4686475 L99.0056746,15.7503699 L100.438629,0 Z M90.753809,0 L85.2922051,21.3966023 L90.18272,21.5179018 L91.7002982,0 Z M81.0509853,0 L75.6223915,21.5683846 L80.5111265,21.6896841 L81.0509853,0 Z M71.2922051,0 L65.8826531,21.3966023 L70.773168,21.5179018 L71.2922051,0 Z M61.5504196,0 L55.7349222,15.5648025 L60.1275235,15.8465249 L61.5504196,0 Z M45.7466825,0 L45.7466825,15.2806261 L51.1601003,15.2806261 L51.1601003,0 Z M35.9619012,0 L30.5463184,15.2806261 L35.9619012,15.2806261 L35.9619012,0 Z M25.4057263,0 L20,15.2806261 L25.4057263,15.2806261 L25.4057263,0 Z M10,0 L10,15.2806261 L15.4134178,15.2806261 L15.4134178,0 Z"></path>
+                </svg>
+                <nav class="ml-8 hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-300">TV Shows</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Movies</a></li>
+                        <li><a href="#" class="hover:text-gray-300">New & Popular</a></li>
+                        <li><a href="#" class="hover:text-gray-300">My List</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="relative hidden md:block">
+                    <input type="text" placeholder="Search" class="bg-black bg-opacity-50 border border-gray-600 rounded px-3 py-1 text-sm w-40">
+                </div>
+                <div class="w-8 h-8 rounded bg-gray-600 flex items-center justify-center">
+                    <i class="fas fa-bell text-white"></i>
+                </div>
+                <div class="w-8 h-8 rounded overflow-hidden">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Profile" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section h-screen flex items-center justify-center text-center px-4">
+        <div class="max-w-3xl mx-auto">
+            <h1 class="text-5xl font-bold mb-4">Unlimited movies, TV shows, and more.</h1>
+            <h2 class="text-2xl mb-6">Watch anywhere. Cancel anytime.</h2>
+            <p class="text-xl mb-8">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-2">
+                <input type="email" placeholder="Email address" class="px-4 py-3 bg-black bg-opacity-70 border border-gray-600 rounded w-full md:w-96">
+                <button class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3 rounded flex items-center justify-center">
+                    Get Started <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Sections -->
+    <div class="py-16 px-8">
+        <!-- Trending Now -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">Trending Now</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Movie cards -->
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg" alt="Movie 1" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg" alt="Movie 2" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg" alt="Movie 3" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg" alt="Movie 4" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg" alt="Movie 5" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg" alt="Movie 6" class="w-full h-auto rounded">
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular on Netflix -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold mb-6">Popular on Netflix</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                <!-- Movie cards -->
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg" alt="Movie 1" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg" alt="Movie 2" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg" alt="Movie 3" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/1117132/pexels-photo-1117132.jpeg" alt="Movie 4" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/3062545/pexels-photo-3062545.jpeg" alt="Movie 5" class="w-full h-auto rounded">
+                </div>
+                <div class="movie-card">
+                    <img src="https://images.pexels.com/photos/7238759/pexels-photo-7238759.jpeg" alt="Movie 6" class="w-full h-auto rounded">
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-500 py-12 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="mb-8">
+                <p>Questions? Call 1-844-505-2993</p>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white">Investor Relations</a></li>
+                        <li><a href="#" class="hover:text-white">Ways to Watch</a></li>
+                        <li><a href="#" class="hover:text-white">Corporate Information</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Jobs</a></li>
+                        <li><a href="#" class="hover:text-white">Terms of Use</a></li>
+                        <li><a href="#" class="hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Account</a></li>
+                        <li><a href="#" class="hover:text-white">Redeem Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Speed Test</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white">Media Center</a></li>
+                        <li><a href="#" class="hover:text-white">Buy Gift Cards</a></li>
+                        <li><a href="#" class="hover:text-white">Cookie Preferences</a></li>
+                        <li><a href="#" class="hover:text-white">Legal Notices</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mb-8">
+                <select class="bg-black border border-gray-600 text-white px-4 py-2 rounded">
+                    <option>English</option>
+                    <option>Español</option>
+                </select>
+            </div>
+            <div>
+                <p>Netflix Clone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple hover effect for movie cards
+        document.querySelectorAll('.movie-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.1)';
+                card.style.zIndex = '10';
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+                card.style.zIndex = '1';
+            });
+        });
+    </script>
+</body>
+</html>
